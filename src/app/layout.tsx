@@ -1,22 +1,10 @@
-import type { Metadata } from "next";
-import { Vazirmatn } from "next/font/google";
+import ThemeRegistry from "./ThemeRegistry";
 import "./globals.css";
 
-const vazirmatn = Vazirmatn({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Ticket.io Probeaufgabe",
-  description: "",
-};
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className={vazirmatn.className}>{children}</body>
-    </html>
-  );
+  return <ThemeRegistry options={{ key: "mui" }}>{children}</ThemeRegistry>;
 }

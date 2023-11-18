@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "title": "Tiefblaue Nacht @ Bootshaus Blckbx",
     "startDate": "2023-05-05T23:00:00+02:00",
     "endDate": "2023-05-06T05:30:00+02:00",
@@ -13,9 +14,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 15
+    "priceFrom": 15,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "2",
     "title": "SOLD OUT: Stella Bossi / LUSU @ Bootshaus",
     "startDate": "2023-05-05T23:00:00+02:00",
     "endDate": "2023-05-06T06:00:00+02:00",
@@ -29,9 +32,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 0
+    "priceFrom": 0,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "3",
     "title": "Madness RAW #4",
     "startDate": "2023-05-06T22:30:00+02:00",
     "endDate": "2023-05-07T06:00:00+02:00",
@@ -45,9 +50,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 35
+    "priceFrom": 35,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "4",
     "title": "Drop That w/ Used + Techno Floor at Bootshaus",
     "startDate": "2023-05-12T23:00:00+02:00",
     "endDate": "2023-05-13T06:00:00+02:00",
@@ -61,9 +68,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 17
+    "priceFrom": 17,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "5",
     "title": "INURFASE w/ GPF pres. The Piepshow",
     "startDate": "2023-05-12T22:30:00+02:00",
     "endDate": "2023-05-13T06:00:00+02:00",
@@ -77,9 +86,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 38.69
+    "priceFrom": 38.69,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "6",
     "title": "SOLD OUT: unreal x Klangkuenstler, SHDW & Obscure Shape, Airod, Parallx, Farrago, Raven, and more",
     "startDate": "2023-05-17T22:30:00+02:00",
     "endDate": "2023-05-18T08:00:00+02:00",
@@ -93,9 +104,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 0
+    "priceFrom": 0,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "7",
     "title": "Blacklist Redemption w. HEDEX, MARAUDA, SNAILS, HOL!, AUTOMHATE and more!",
     "startDate": "2023-05-19T22:00:00+02:00",
     "endDate": "2023-05-20T06:00:00+02:00",
@@ -109,9 +122,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 35
+    "priceFrom": 35,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "8",
     "title": "Vol. II: Bootshaus Sommerfest auf 4 Floors",
     "startDate": "2023-05-20T22:00:00+02:00",
     "endDate": "2023-05-21T06:00:00+02:00",
@@ -125,9 +140,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 12
+    "priceFrom": 12,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "9",
     "title": "Oliver Heldens pres. by Bootshaus!",
     "startDate": "2023-05-26T23:00:00+02:00",
     "endDate": "2023-05-27T06:00:00+02:00",
@@ -141,9 +158,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 26
+    "priceFrom": 26,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "10",
     "title": "Wonderful Days - The Classic Rave Festival VOL IV",
     "startDate": "2023-05-27T22:00:00+02:00",
     "endDate": "2023-05-28T05:00:00+02:00",
@@ -157,9 +176,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 30
+    "priceFrom": 30,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "11",
     "title": "Nibirii Pre Party w. Luude / Koven / Marika Rossa / uvm.",
     "startDate": "2023-05-28T22:00:00+02:00",
     "endDate": "2023-05-29T06:00:00+02:00",
@@ -173,9 +194,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 20
+    "priceFrom": 20,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "12",
     "title": "Bootshaus On A Ship",
     "startDate": "2023-06-04T14:00:00+02:00",
     "endDate": "2023-06-04T20:00:00+02:00",
@@ -189,9 +212,11 @@
       "postalCode": "50667",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 30
+    "priceFrom": 30,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "13",
     "title": "10 years BBC! Beats: Lilly Palmer / Bass: Kanine & many more",
     "startDate": "2023-06-07T23:00:00+02:00",
     "endDate": "2023-06-08T06:00:00+02:00",
@@ -205,9 +230,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 25
+    "priceFrom": 25,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "14",
     "title": "Vol: III - Bootshaus Sommerfest auf 4 Floors inkl. Open Air!",
     "startDate": "2023-06-17T22:00:00+02:00",
     "endDate": "2023-06-18T06:00:00+02:00",
@@ -221,9 +248,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 12
+    "priceFrom": 12,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "15",
     "title": "Chrome Cologne: Basswell, Lee Ann Roberts, Oposition, Cloudy, uvm.",
     "startDate": "2023-06-23T22:00:00+02:00",
     "endDate": "2023-06-24T08:00:00+02:00",
@@ -237,9 +266,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 35
+    "priceFrom": 35,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "16",
     "title": "SOLD OUT: unreal pres. Nico Moreno all night long",
     "startDate": "2023-07-14T23:00:00+02:00",
     "endDate": "2023-07-15T07:00:00+02:00",
@@ -253,9 +284,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 0
+    "priceFrom": 0,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "17",
     "title": "Vol. IV: Bootshaus Sommerfest auf 4 Floors",
     "startDate": "2023-07-15T22:00:00+02:00",
     "endDate": "2023-07-16T06:00:00+02:00",
@@ -269,9 +302,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 10
+    "priceFrom": 10,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "18",
     "title": "HEX Cologne | Lorenzo Raganzini b2b Paolo Ferrara, Callush b2b B2, Tham",
     "startDate": "2023-07-21T23:00:00+02:00",
     "endDate": "2023-07-22T06:00:00+02:00",
@@ -285,9 +320,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 30
+    "priceFrom": 30,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "19",
     "title": "Hakke360 pres. 30 Years RTC",
     "startDate": "2023-07-29T22:30:00+02:00",
     "endDate": "2023-07-30T06:00:00+02:00",
@@ -301,9 +338,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 22
+    "priceFrom": 22,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "20",
     "title": "CMON: HBz, Oliver Magenta, Tiefblau, Sarazar, Rewi",
     "startDate": "2023-08-25T22:00:00+02:00",
     "endDate": "2023-08-26T06:00:00+02:00",
@@ -317,9 +356,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 22
+    "priceFrom": 22,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "21",
     "title": "NIBIRII FESTIVAL 2023 - UPGRADES",
     "startDate": "2023-08-25T12:00:00+02:00",
     "endDate": "2023-08-27T18:00:00+02:00",
@@ -333,9 +374,11 @@
       "postalCode": "52349",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 30
+    "priceFrom": 30,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "22",
     "title": "NIBIRII FESTIVAL 2023",
     "startDate": "2023-08-25T08:00:00+02:00",
     "endDate": "2023-08-27T18:00:00+02:00",
@@ -349,9 +392,11 @@
       "postalCode": "52349",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 49.99
+    "priceFrom": 49.99,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "23",
     "title": "INURFASE MASSIVE: Highlands of Doom",
     "startDate": "2023-09-15T22:30:00+02:00",
     "endDate": "2023-09-16T06:00:00+02:00",
@@ -365,9 +410,11 @@
       "postalCode": "51063",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 33
+    "priceFrom": 33,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "24",
     "title": "Blacklist Festival 2023",
     "startDate": "2023-10-07T19:00:00+02:00",
     "endDate": "2023-10-08T07:00:00+02:00",
@@ -381,9 +428,11 @@
       "postalCode": "46047",
       "addressCountry": "Deutschland"
     },
-    "priceFrom": 25
+    "priceFrom": 25,
+    "location": "Bootshaus, Köln"
   },
   {
+    "id": "25",
     "title": "Gutscheine Bootshaus",
     "startDate": "2023-01-01T00:01:00+01:00",
     "endDate": "2024-01-02T05:00:00+01:00",
