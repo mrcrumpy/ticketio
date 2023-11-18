@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Container, Grid } from "@mui/material";
 import { Stage } from "@/components/Stage/Stage";
 import { LanguageSwitch } from "@/components/LanguageSwitch/LanguageSwitch";
+import { IEvent } from "@/components/EventList/useEventList";
 
 export default function ListingPage({
   params,
@@ -21,7 +22,7 @@ export default function ListingPage({
           <LanguageSwitch value={locale} />
         </Grid>
         <Stage locale={locale} />
-        <EventList events={Object.values(events)} locale={locale} />
+        <EventList events={Object.values(events) as IEvent[]} locale={locale} />
       </Container>
     </main>
   );

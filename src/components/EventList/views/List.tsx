@@ -38,9 +38,7 @@ export const List: FC<{ events: TioEvent[] }> = ({ events }) => {
           </Grid>
           <Grid item xs={12} md={2}>
             <Typography>{t("Tickets from", { price: "" })}</Typography>
-            <Typography component="strong" variant="strong">
-              {price}
-            </Typography>
+            <strong>{price}</strong>
           </Grid>
           <Grid
             item
