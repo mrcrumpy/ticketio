@@ -22,6 +22,8 @@ import {
 import { useI18n } from "@/locales/client";
 import { SearchInput } from "../SearchInput/SearchInput";
 import { Icon } from "@/components/Icon/Icon";
+import { Event } from "schema-dts";
+import { JsonLd } from "react-schemaorg";
 
 const StyledToggleButton = styled(ToggleButton)`
   border: 0;
@@ -85,6 +87,30 @@ const EventList: FC<{ events: IEvent[]; locale: AVAILABLE_LANG }> = ({
       {displayMode === "list" && <List events={events} />}
       {displayMode === "tiles" && <Tiles events={events} />}
       {displayMode === "calendar" && <Calendar events={events} />}
+
+      {events.map(
+        ({ id, title, startDate, endDate, address, location, image }) => (
+          <JsonLd<Event>
+            key={id}
+            item={{
+              "@context": "https://schema.org",
+              "@type": "Event",
+              name: title,
+              startDate,
+              endDate,
+              eventAttendanceMode:
+                "https://schema.org/OfflineEventAttendanceMode",
+              eventStatus: "https://schema.org/EventScheduled",
+              location: {
+                "@type": "Place",
+                name: location,
+                address,
+              },
+              image,
+            }}
+          />
+        )
+      )}
     </>
   );
 };

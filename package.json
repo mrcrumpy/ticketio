@@ -19,7 +19,9 @@
     "next": "14.0.3",
     "next-international": "^1.1.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-schemaorg": "^2.0.0",
+    "schema-dts": "^1.1.2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.4",

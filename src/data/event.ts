@@ -1,4 +1,4 @@
-import { IEvent } from "@/components/EventList/useEventList";
+import { IAddress, IEvent } from "@/components/EventList/useEventList";
 import { AVAILABLE_LANG, STORES } from "@/constants";
 
 export class TioEvent {
@@ -12,6 +12,9 @@ export class TioEvent {
     currency: string;
   };
   image: string;
+  startDate: string;
+  endDate: string;
+  address: IAddress;
 
   static from(event: IEvent, locale: AVAILABLE_LANG) {
     if (!event.id || !event.title || !event.startDate) {
@@ -33,11 +36,14 @@ export class TioEvent {
     this.locale = locale;
     this.title = event.title;
     this.timestamp = new Date(event.startDate);
+    this.startDate = event.startDate;
+    this.endDate = event.endDate;
     this.id = event.id;
     this.priceFrom = event.priceFrom;
     this.image = event.imageUrl;
     this.location = event.location;
     this.storeConfig = STORES[locale];
+    this.address = event.address;
   }
 
   get date() {

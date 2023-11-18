@@ -4,11 +4,11 @@ import { AVAILABLE_LANG, IStoreConfig, STORES } from "@/constants";
 import { TioEvent } from "@/data/event";
 import { useEffect, useState } from "react";
 
-interface IAddress {
-  "@type": string;
+export interface IAddress {
+  "@type": "PostalAddress";
   streetAddress: string;
   addressLocality: string;
-  addressRegion: null;
+  addressRegion: string;
   postalCode: string;
   addressCountry: string;
 }
