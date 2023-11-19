@@ -1,5 +1,12 @@
 import { ThemeOptions } from "@mui/material";
 
+import NextLink from "next/link";
+import { forwardRef } from "react";
+
+const LinkComponent = forwardRef(function LinkBehaviour(props, ref) {
+  return <NextLink ref={ref} {...props} />;
+});
+
 const theme = {
   palette: {
     mode: "light",
@@ -44,6 +51,9 @@ const theme = {
       },
     },
     MuiButton: {
+      defaultProps: {
+        LinkComponent,
+      },
       styleOverrides: {
         root: {
           boxShadow: "none",

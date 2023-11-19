@@ -11,7 +11,7 @@ export const List: FC<{ events: TioEvent[] }> = ({ events }) => {
 
   return (
     <>
-      {events.map(({ id, title, price, location, date, time }) => (
+      {events.map(({ id, title, price, location, date, time, detailLink }) => (
         <Grid
           container
           key={id}
@@ -47,7 +47,11 @@ export const List: FC<{ events: TioEvent[] }> = ({ events }) => {
             display="flex"
             alignItems="center"
           >
-            <Button variant="contained" endIcon={<Icon type="chevron_right" />}>
+            <Button
+              variant="contained"
+              href={detailLink}
+              endIcon={<Icon type="chevron_right" />}
+            >
               {t("[overview] To the tickets")}
             </Button>
           </Grid>

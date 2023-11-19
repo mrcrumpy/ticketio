@@ -75,4 +75,8 @@ export class TioEvent {
       currency: this.storeConfig.currency,
     }).format(this.priceFrom);
   }
+
+  get detailLink() {
+    return `/${this.locale}/event/${this.id}`;
+  }
 }
