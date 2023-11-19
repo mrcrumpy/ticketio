@@ -73,7 +73,9 @@ const EventList: FC<{
               display="flex"
               justifyContent="flex-end"
             >
-              {t("[overview] View:")}&nbsp;
+              <Typography sx={{ display: { xs: "none", sm: "block" } }}>
+                {t("[overview] View:")}&nbsp;
+              </Typography>
               <ToggleButtonGroup
                 value={displayMode}
                 exclusive

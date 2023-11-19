@@ -40,7 +40,7 @@ export const Tiles: FC<{ events: TioEvent[] }> = ({ events }) => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} sx={{ paddingTop: { xs: 2, md: 0 } }}>
               <List disablePadding>
                 <ListItem>
                   <Typography
@@ -74,6 +74,7 @@ export const Tiles: FC<{ events: TioEvent[] }> = ({ events }) => {
               alignItems="flex-start"
               display="flex"
               paddingTop={4}
+              sx={{ paddingTop: { xs: 1, md: 4 } }}
             >
               <Button
                 variant="contained"
