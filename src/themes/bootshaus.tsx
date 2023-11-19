@@ -1,9 +1,12 @@
 import { ThemeOptions } from "@mui/material";
 
 import NextLink from "next/link";
-import { forwardRef } from "react";
+import { Ref, forwardRef } from "react";
 
-const LinkComponent = forwardRef(function LinkBehaviour(props, ref) {
+const LinkComponent = forwardRef(function LinkBehaviour(
+  props: { href: string },
+  ref: Ref<HTMLAnchorElement>
+) {
   return <NextLink ref={ref} {...props} />;
 });
 

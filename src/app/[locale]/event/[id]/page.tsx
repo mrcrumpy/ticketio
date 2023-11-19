@@ -1,5 +1,5 @@
 import { AVAILABLE_LANG } from "@/constants";
-import { events } from "@/mock/bootshaus.json";
+import * as data from "@/mock/bootshaus.json";
 import { notFound } from "next/navigation";
 
 const EventPage = ({
@@ -8,8 +8,9 @@ const EventPage = ({
   params: { locale: AVAILABLE_LANG; id: string };
 }) => {
   const { id } = params;
+  const { events } = data;
 
-  const event = events.find(({ id: eventId }) => eventId === id);
+  const event = events?.find(({ id: eventId }) => eventId === id);
 
   if (!event) return notFound();
   return (
