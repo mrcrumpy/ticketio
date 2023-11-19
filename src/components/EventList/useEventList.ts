@@ -2,7 +2,7 @@
 
 import { AvailableLang, IStoreConfig, PER_PAGE, STORES } from "@/constants";
 import { TioEvent } from "@/data/event";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { chunkArray } from "./helper";
 
 export interface IAddress {
@@ -39,7 +39,7 @@ export const useEventList = (
 
   const [searchValue, setSearchValue] = useState<string>("");
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const savedDisplayMode = sessionStorage.getItem(
       "displayMode"
     ) as DisplayMode;
@@ -50,7 +50,7 @@ export const useEventList = (
     setLoaded(true);
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (loaded) {
       sessionStorage?.setItem("displayMode", displayMode);
     }
