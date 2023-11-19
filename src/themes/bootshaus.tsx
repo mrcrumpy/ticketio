@@ -94,6 +94,42 @@ const theme = {
         },
       },
     },
+    MuiPagination: {
+      styleOverrides: {
+        root: {
+          paddingTop: "24px",
+          paddingBottom: "24px",
+          justifyContent: "center",
+          display: "flex",
+        },
+      },
+    },
+    MuiPaginationItem: {
+      styleOverrides: {
+        root: {
+          background: "none",
+          borderRadius: 0,
+          paddingLeft: 0,
+          paddingRight: 0,
+          width: "auto",
+          minWidth: 0,
+          borderBottom: "3px solid transparent",
+          height: "24px",
+
+          marginRight: "8px",
+          marginLeft: "8px",
+          "&.Mui-selected": {
+            background: "none",
+            fontWeight: "bold",
+            borderBottom: "3px solid #000",
+          },
+        },
+        previousNext: {
+          marginRight: "32px",
+          marginLeft: "32px",
+        },
+      },
+    },
   },
 } as ThemeOptions;
 

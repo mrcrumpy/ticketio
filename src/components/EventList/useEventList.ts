@@ -1,8 +1,9 @@
 "use client";
 
-import { AVAILABLE_LANG, IStoreConfig, STORES } from "@/constants";
+import { AVAILABLE_LANG, IStoreConfig, PER_PAGE, STORES } from "@/constants";
 import { TioEvent } from "@/data/event";
 import { useEffect, useState } from "react";
+import { chunkArray } from "./helper";
 
 export interface IAddress {
   "@type": "PostalAddress";
@@ -27,7 +28,11 @@ export interface IEvent {
 
 type DisplayMode = "list" | "tiles" | "calendar";
 
-export const useEventList = (events: IEvent[], locale: AVAILABLE_LANG) => {
+export const useEventList = (
+  events: IEvent[],
+  locale: AVAILABLE_LANG,
+  page: number
+) => {
   const [displayMode, setDisplayMode] = useState<DisplayMode>("list");
 
   const [searchValue, setSearchValue] = useState<string>("");
@@ -47,10 +52,13 @@ export const useEventList = (events: IEvent[], locale: AVAILABLE_LANG) => {
     .filter((el) => el)
     .filter((el) => TioEvent.filter(el as TioEvent, searchValue));
 
+  const eventPages = chunkArray(processedEvents, PER_PAGE);
+
   return {
     displayMode,
     setDisplayMode,
-    events: processedEvents,
+    events: eventPages[page - 1] || [],
+    pages: eventPages.length,
     setSearchValue,
     currentStore: STORES[locale],
   } as {
@@ -59,5 +67,6 @@ export const useEventList = (events: IEvent[], locale: AVAILABLE_LANG) => {
     events: TioEvent[];
     setSearchValue: (value: string) => void;
     currentStore: IStoreConfig;
+    pages: number;
   };
 };

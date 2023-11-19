@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 "use client";
-import { FC } from "react";
+import { ChangeEvent, FC } from "react";
 
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
@@ -11,12 +11,13 @@ import { AVAILABLE_LANG } from "@/constants";
 import { List } from "./views/List";
 import { Tiles } from "./views/Tiles";
 import { Calendar } from "./views/Calendar";
-import { Grid, Typography, styled } from "@mui/material";
+import { Grid, Pagination, Typography, styled } from "@mui/material";
 import { useI18n } from "@/locales/client";
 import { SearchInput } from "../SearchInput/SearchInput";
 import { Icon } from "@/components/Icon/Icon";
 import { Event } from "schema-dts";
 import { JsonLd } from "react-schemaorg";
+import { useRouter } from "next/navigation";
 
 const StyledToggleButton = styled(ToggleButton)`
   border: 0;
@@ -30,14 +31,26 @@ const StyledToggleButton = styled(ToggleButton)`
   }
 `;
 
-const EventList: FC<{ events: IEvent[]; locale: AVAILABLE_LANG }> = ({
-  events: rawEvents,
-  locale,
-}) => {
-  const { displayMode, setDisplayMode, events, setSearchValue, currentStore } =
-    useEventList(rawEvents, locale);
+const EventList: FC<{
+  events: IEvent[];
+  locale: AVAILABLE_LANG;
+  page: number;
+}> = ({ events: rawEvents, locale, page }) => {
+  const {
+    displayMode,
+    setDisplayMode,
+    events,
+    setSearchValue,
+    currentStore,
+    pages,
+  } = useEventList(rawEvents, locale, page);
 
   const t = useI18n();
+  const router = useRouter();
+
+  const handlePaginationChange = (e: ChangeEvent<unknown>, value: number) => {
+    router.push(`/${locale}/${value}`);
+  };
 
   return (
     <>
@@ -83,6 +96,7 @@ const EventList: FC<{ events: IEvent[]; locale: AVAILABLE_LANG }> = ({
       {displayMode === "list" && <List events={events} />}
       {displayMode === "tiles" && <Tiles events={events} />}
       {displayMode === "calendar" && <Calendar events={events} />}
+      <Pagination count={pages} page={page} onChange={handlePaginationChange} />
 
       {events.map(
         ({ id, title, startDate, endDate, address, location, image }) => (

@@ -22,3 +22,5 @@ export interface IStoreConfig {
   name: string;
   logo: string;
 }
+
+export const PER_PAGE = 8;

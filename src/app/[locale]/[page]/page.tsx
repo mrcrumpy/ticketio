@@ -10,9 +10,9 @@ import { IEvent } from "@/components/EventList/useEventList";
 export default function ListingPage({
   params,
 }: {
-  params: { locale: AVAILABLE_LANG };
+  params: { locale: AVAILABLE_LANG; page: string };
 }) {
-  const { locale } = params;
+  const { locale, page } = params;
 
   if (!Object.keys(STORES).includes(locale)) return notFound();
   return (
@@ -25,7 +25,7 @@ export default function ListingPage({
         <EventList
           events={events as unknown as IEvent[]}
           locale={locale}
-          page={1}
+          page={parseInt(page)}
         />
       </Container>
     </main>
