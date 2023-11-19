@@ -26,8 +26,8 @@ export const List: FC<{ events: TioEvent[] }> = ({ events }) => {
             <Typography component="h2" variant="h3">
               {title}
             </Typography>
-            <Box display="flex" alignItems="center">
-              <Icon type="location_on" />
+            <Box display="flex">
+              <Icon size={18} type="location_on" />
               &nbsp;{location}
             </Box>
           </Grid>

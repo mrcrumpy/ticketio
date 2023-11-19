@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 "use client";
-import { MenuItem, Select, css } from "@mui/material";
+import { MenuItem, Select } from "@mui/material";
 import { useChangeLocale, useI18n } from "@/locales/client";
 import { AVAILABLE_LANG } from "@/constants";
 import { FC } from "react";

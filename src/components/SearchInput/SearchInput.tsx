@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
-import { Input, InputAdornment, css } from "@mui/material";
+import { Input, InputAdornment } from "@mui/material";
 import { FC } from "react";
+import { Icon } from "@/components/Icon/Icon";
 
 export const SearchInput: FC<{ onChange: (value: string) => void }> = ({
   onChange,
@@ -10,7 +11,7 @@ export const SearchInput: FC<{ onChange: (value: string) => void }> = ({
       disableUnderline
       startAdornment={
         <InputAdornment position="start">
-          <span className="material-symbols-outlined">search</span>
+          <Icon type="search" />
         </InputAdornment>
       }
       onChange={(event) => onChange(event.target.value)}

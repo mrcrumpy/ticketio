@@ -80,6 +80,7 @@ const theme = {
         root: {
           paddingTop: "0",
           paddingBottom: "5px",
+          alignItems: "flex-start",
         },
       },
     },

@@ -1,5 +1,7 @@
+/** @jsxImportSource @emotion/react */
+"use client";
 import { AVAILABLE_LANG, STORES } from "@/constants";
-import { Grid } from "@mui/material";
+import { Grid, css } from "@mui/material";
 import Image from "next/image";
 import { FC } from "react";
 
@@ -14,6 +16,10 @@ export const Stage: FC<{ locale: AVAILABLE_LANG }> = ({ locale }) => {
         width={420}
         height={233}
         priority
+        css={css`
+          max-width: 90%;
+          height: auto;
+        `}
       />
     </Grid>
   );

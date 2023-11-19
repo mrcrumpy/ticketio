@@ -47,17 +47,17 @@ export const Tiles: FC<{ events: TioEvent[] }> = ({ events }) => {
                 </Typography>
               </ListItem>
               <ListItem>
-                <Icon type="calendar_month" />
+                <Icon type="calendar_month" size={18} />
                 &nbsp;{date}&nbsp;
-                <Icon type="schedule" />
+                <Icon type="schedule" size={18} />
                 &nbsp;{time}
               </ListItem>
               <ListItem>
-                <Icon type="location_on" />
+                <Icon type="location_on" size={18} />
                 &nbsp;{location}
               </ListItem>
               <ListItem>
-                <Icon type="confirmation_number" />
+                <Icon type="confirmation_number" size={18} />
                 &nbsp;{t("Tickets from", { price })}
               </ListItem>
             </List>
