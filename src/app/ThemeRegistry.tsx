@@ -1,4 +1,6 @@
-// app/ThemeRegistry.tsx
+// This is required for theming MUI in nextjs
+// see: https://mui.com/material-ui/guides/next-js-app-router/
+
 "use client";
 import createCache from "@emotion/cache";
 import { useServerInsertedHTML } from "next/navigation";
