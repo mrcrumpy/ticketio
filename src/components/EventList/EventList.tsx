@@ -18,6 +18,7 @@ import { Icon } from "@/components/Icon/Icon";
 import { Event } from "schema-dts";
 import { JsonLd } from "react-schemaorg";
 import { useRouter } from "next/navigation";
+import EmptyState from "./views/EmptyState";
 
 const StyledToggleButton = styled(ToggleButton)`
   border: 0;
@@ -98,7 +99,15 @@ const EventList: FC<{
       {displayMode === "list" && <List events={events} />}
       {displayMode === "tiles" && <Tiles events={events} />}
       {displayMode === "calendar" && <Calendar events={events} />}
-      <Pagination count={pages} page={page} onChange={handlePaginationChange} />
+      {!events || !events.length ? (
+        <EmptyState />
+      ) : (
+        <Pagination
+          count={pages}
+          page={page}
+          onChange={handlePaginationChange}
+        />
+      )}
 
       {events.map(
         ({ id, title, startDate, endDate, address, location, image }) => (

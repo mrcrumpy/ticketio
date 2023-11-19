@@ -7,4 +7,6 @@ export default {
   at: "ab {time}",
   German: "Deutsch",
   English: "Englisch",
+  "There were no events found":
+    "Es konnten keine Veranstaltungen gefunden werden",
 } as const;
