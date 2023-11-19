@@ -32,7 +32,7 @@ export const List: FC<{ events: TioEvent[] }> = ({ events }) => {
             </Box>
           </Grid>
           <Grid item xs={12} md={2}>
-            <Typography>{t("On the", { date })}</Typography>
+            <Typography>{t("On", { date })}</Typography>
             <Typography>{t("at", { time })}</Typography>
           </Grid>
           <Grid item xs={12} md={2}>

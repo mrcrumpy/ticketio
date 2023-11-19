@@ -3,7 +3,7 @@ export default {
   "[overview] View:": "View:",
   "[overview] To the tickets": "To the tickets",
   "Tickets from": "Tickets from {price}",
-  "On the": "On the {date}",
+  On: "On {date}",
   at: "at {time}",
   German: "German",
   English: "English",
