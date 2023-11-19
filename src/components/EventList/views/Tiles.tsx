@@ -40,13 +40,7 @@ export const Tiles: FC<{ events: TioEvent[] }> = ({ events }) => {
             </Box>
           </Grid>
           <Grid item xs={12} md={5}>
-            <List
-              disablePadding
-              css={css`
-                font-size: 18px;
-                leine-height: 1.56;
-              `}
-            >
+            <List disablePadding>
               <ListItem>
                 <Typography component="h3" variant="h2">
                   {title}

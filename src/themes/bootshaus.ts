@@ -71,6 +71,7 @@ const theme = {
       styleOverrides: {
         positionStart: {
           marginLeft: "12px",
+          color: "#000",
         },
       },
     },

@@ -9,12 +9,7 @@ export const SearchInput: FC<{ onChange: (value: string) => void }> = ({
     <Input
       disableUnderline
       startAdornment={
-        <InputAdornment
-          position="start"
-          css={css`
-            color: black;
-          `}
-        >
+        <InputAdornment position="start">
           <span className="material-symbols-outlined">search</span>
         </InputAdornment>
       }
