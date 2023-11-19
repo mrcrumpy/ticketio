@@ -54,33 +54,36 @@ const EventList: FC<{ events: IEvent[]; locale: AVAILABLE_LANG }> = ({
             {t("[overview] Tickets for", { name: currentStore.name })}
           </Typography>
         </Grid>
-        <Grid container xs={12} md={6} justifyContent="flex-end">
-          <Grid item xs="auto" display="flex" paddingRight={2}>
-            <SearchInput onChange={setSearchValue} />
-          </Grid>
-          <Grid
-            item
-            xs="auto"
-            alignItems="center"
-            display="flex"
-            justifyContent="flex-end"
-          >
-            {t("[overview] View:")}&nbsp;
-            <ToggleButtonGroup
-              value={displayMode}
-              exclusive
-              onChange={(event, value) => setDisplayMode(value)}
+        <Grid item xs={12} md={6}>
+          <Grid container justifyContent="flex-end">
+            <Grid item xs={6} md="auto" display="flex" paddingRight={2}>
+              <SearchInput onChange={setSearchValue} />
+            </Grid>
+            <Grid
+              item
+              xs={6}
+              md="auto"
+              alignItems="center"
+              display="flex"
+              justifyContent="flex-end"
             >
-              <StyledToggleButton value="tiles">
-                <Icon type="grid_view" />
-              </StyledToggleButton>
-              <StyledToggleButton value="list">
-                <Icon type="list" />
-              </StyledToggleButton>
-              <StyledToggleButton value="calendar">
-                <Icon type="calendar_month" />
-              </StyledToggleButton>
-            </ToggleButtonGroup>
+              {t("[overview] View:")}&nbsp;
+              <ToggleButtonGroup
+                value={displayMode}
+                exclusive
+                onChange={(event, value) => setDisplayMode(value)}
+              >
+                <StyledToggleButton value="tiles">
+                  <Icon type="grid_view" />
+                </StyledToggleButton>
+                <StyledToggleButton value="list">
+                  <Icon type="list" />
+                </StyledToggleButton>
+                <StyledToggleButton value="calendar">
+                  <Icon type="calendar_month" />
+                </StyledToggleButton>
+              </ToggleButtonGroup>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>

@@ -1,5 +1,5 @@
 import { EventList } from "@/components/EventList";
-import * as events from "@/mock/bootshaus.json";
+import { events } from "@/mock/bootshaus.json";
 import { AVAILABLE_LANG, STORES } from "@/constants";
 import { notFound } from "next/navigation";
 import { Container, Grid } from "@mui/material";
@@ -18,11 +18,11 @@ export default function ListingPage({
   return (
     <main>
       <Container>
-        <Grid container xs={12} justifyContent="flex-end">
+        <Grid container justifyContent="flex-end">
           <LanguageSwitch value={locale} />
         </Grid>
         <Stage locale={locale} />
-        <EventList events={Object.values(events) as IEvent[]} locale={locale} />
+        <EventList events={events as unknown as IEvent[]} locale={locale} />
       </Container>
     </main>
   );

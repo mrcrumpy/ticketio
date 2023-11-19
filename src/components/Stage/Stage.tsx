@@ -13,6 +13,7 @@ export const Stage: FC<{ locale: AVAILABLE_LANG }> = ({ locale }) => {
         alt={currentStore.name}
         width={420}
         height={233}
+        priority
       />
     </Grid>
   );

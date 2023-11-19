@@ -14,7 +14,6 @@ export const List: FC<{ events: TioEvent[] }> = ({ events }) => {
       {events.map(({ id, title, price, location, date, time }) => (
         <Grid
           container
-          xs={12}
           key={id}
           padding={2}
           css={css`

@@ -8,7 +8,7 @@ export interface IAddress {
   "@type": "PostalAddress";
   streetAddress: string;
   addressLocality: string;
-  addressRegion: string;
+  addressRegion?: string;
   postalCode: string;
   addressCountry: string;
 }
@@ -28,13 +28,15 @@ export interface IEvent {
 type DisplayMode = "list" | "tiles" | "calendar";
 
 export const useEventList = (events: IEvent[], locale: AVAILABLE_LANG) => {
-  const [displayMode, setDisplayMode] = useState<DisplayMode>(
-    sessionStorage !== undefined
-      ? (sessionStorage?.getItem("displayMode") as DisplayMode) || "list"
-      : "list"
-  );
+  const [displayMode, setDisplayMode] = useState<DisplayMode>("list");
 
   const [searchValue, setSearchValue] = useState<string>("");
+
+  useEffect(() => {
+    if (sessionStorage.getItem("displayMode")) {
+      setDisplayMode(sessionStorage.getItem("displayMode") as DisplayMode);
+    }
+  }, []);
 
   useEffect(() => {
     sessionStorage?.setItem("displayMode", displayMode);
