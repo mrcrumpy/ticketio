@@ -42,7 +42,10 @@ export const Tiles: FC<{ events: TioEvent[] }> = ({ events }) => {
           <Grid item xs={12} md={5}>
             <List disablePadding>
               <ListItem>
-                <Typography component="h3" variant="h2">
+                <Typography
+                  component="h3"
+                  sx={{ typography: { xs: "h3", md: "h2" } }}
+                >
                   {title}
                 </Typography>
               </ListItem>

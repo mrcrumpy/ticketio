@@ -11,14 +11,7 @@ import { AVAILABLE_LANG } from "@/constants";
 import { List } from "./views/List";
 import { Tiles } from "./views/Tiles";
 import { Calendar } from "./views/Calendar";
-import {
-  Grid,
-  Input,
-  InputAdornment,
-  Typography,
-  css,
-  styled,
-} from "@mui/material";
+import { Grid, Typography, styled } from "@mui/material";
 import { useI18n } from "@/locales/client";
 import { SearchInput } from "../SearchInput/SearchInput";
 import { Icon } from "@/components/Icon/Icon";

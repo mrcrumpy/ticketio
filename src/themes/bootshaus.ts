@@ -25,7 +25,7 @@ const theme = {
       lineHeight: "1.56",
     },
     h3: {
-      fontWeight: "medium",
+      fontWeight: 600,
       fontSize: "1.125rem",
       lineHeight: "1.56",
     },
