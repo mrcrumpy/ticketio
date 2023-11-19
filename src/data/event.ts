@@ -15,6 +15,7 @@ export class TioEvent {
   startDate: string;
   endDate: string;
   address: IAddress;
+  info?: string;
 
   static from(event: IEvent, locale: AvailableLang) {
     if (!event.id || !event.title || !event.startDate) {
@@ -44,6 +45,7 @@ export class TioEvent {
     this.location = event.location;
     this.storeConfig = STORES[locale];
     this.address = event.address;
+    this.info = event.info;
   }
 
   get date() {

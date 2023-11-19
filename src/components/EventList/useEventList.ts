@@ -24,6 +24,7 @@ export interface IEvent {
   address: IAddress;
   priceFrom: number;
   location: string;
+  info?: string;
 }
 
 type DisplayMode = "list" | "tiles" | "calendar";

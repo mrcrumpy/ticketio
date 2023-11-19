@@ -11,6 +11,7 @@ export const Icon: FC<{ type: string; size?: number }> = ({
       className="material-symbols-outlined"
       css={css`
         font-size: ${size}px;
+        margin-right: 0.5em;
       `}
     >
       {type}

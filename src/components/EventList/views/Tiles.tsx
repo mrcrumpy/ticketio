@@ -19,7 +19,17 @@ export const Tiles: FC<{ events: TioEvent[] }> = ({ events }) => {
   return (
     <Grid>
       {events.map(
-        ({ id, image, title, date, time, price, location, detailLink }) => (
+        ({
+          id,
+          image,
+          title,
+          date,
+          time,
+          price,
+          location,
+          detailLink,
+          info,
+        }) => (
           <Grid container key={id} marginBottom={4}>
             <Grid item xs={12} md={5}>
               <Box
@@ -52,18 +62,24 @@ export const Tiles: FC<{ events: TioEvent[] }> = ({ events }) => {
                 </ListItem>
                 <ListItem>
                   <Icon type="calendar_month" size={18} />
-                  &nbsp;{date}&nbsp;
+                  {date}&nbsp;
                   <Icon type="schedule" size={18} />
-                  &nbsp;{time}
+                  {time}
                 </ListItem>
                 <ListItem>
                   <Icon type="location_on" size={18} />
-                  &nbsp;{location}
+                  {location}
                 </ListItem>
                 <ListItem>
                   <Icon type="confirmation_number" size={18} />
-                  &nbsp;{t("Tickets from", { price })}
+                  {t("Tickets from", { price })}
                 </ListItem>
+                {info && (
+                  <ListItem>
+                    <Icon type="info" size={18} />
+                    {info}
+                  </ListItem>
+                )}
               </List>
             </Grid>
             <Grid
