@@ -1,12 +1,12 @@
 /** @jsxImportSource @emotion/react */
 "use client";
-import { AVAILABLE_LANG, STORES } from "@/constants";
+import { AvailableLang, STORES } from "@/constants";
 import { Grid, css } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
-export const Stage: FC<{ locale: AVAILABLE_LANG }> = ({ locale }) => {
+export const Stage: FC<{ locale: AvailableLang }> = ({ locale }) => {
   const currentStore = STORES[locale];
 
   return (

@@ -1,8 +1,8 @@
 import { IAddress, IEvent } from "@/components/EventList/useEventList";
-import { AVAILABLE_LANG, STORES } from "@/constants";
+import { AvailableLang, STORES } from "@/constants";
 
 export class TioEvent {
-  locale: AVAILABLE_LANG;
+  locale: AvailableLang;
   title: string;
   timestamp: Date;
   id: string;
@@ -16,7 +16,7 @@ export class TioEvent {
   endDate: string;
   address: IAddress;
 
-  static from(event: IEvent, locale: AVAILABLE_LANG) {
+  static from(event: IEvent, locale: AvailableLang) {
     if (!event.id || !event.title || !event.startDate) {
       console.error("Malformed event data");
       return undefined;
@@ -32,7 +32,7 @@ export class TioEvent {
       .includes(searchValue.toLocaleLowerCase());
   }
 
-  constructor(event: IEvent, locale: AVAILABLE_LANG) {
+  constructor(event: IEvent, locale: AvailableLang) {
     this.locale = locale;
     this.title = event.title;
     this.timestamp = new Date(event.startDate);

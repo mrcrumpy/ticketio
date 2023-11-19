@@ -1,6 +1,6 @@
 "use client";
 
-import { AVAILABLE_LANG, IStoreConfig, PER_PAGE, STORES } from "@/constants";
+import { AvailableLang, IStoreConfig, PER_PAGE, STORES } from "@/constants";
 import { TioEvent } from "@/data/event";
 import { useEffect, useState } from "react";
 import { chunkArray } from "./helper";
@@ -30,7 +30,7 @@ type DisplayMode = "list" | "tiles" | "calendar";
 
 export const useEventList = (
   events: IEvent[],
-  locale: AVAILABLE_LANG,
+  locale: AvailableLang,
   page: number
 ) => {
   const [displayMode, setDisplayMode] = useState<DisplayMode>("list");

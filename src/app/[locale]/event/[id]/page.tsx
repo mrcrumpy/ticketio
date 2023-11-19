@@ -1,16 +1,15 @@
-import { AVAILABLE_LANG } from "@/constants";
-import * as data from "@/mock/bootshaus.json";
+import { AvailableLang } from "@/constants";
+import { getEvent } from "@/mock/getEvents";
 import { notFound } from "next/navigation";
 
-const EventPage = ({
+const EventPage = async ({
   params,
 }: {
-  params: { locale: AVAILABLE_LANG; id: string };
+  params: { locale: AvailableLang; id: string };
 }) => {
   const { id } = params;
-  const { events } = data;
 
-  const event = events?.find(({ id: eventId }) => eventId === id);
+  const event = await getEvent(id);
 
   if (!event) return notFound();
   return (

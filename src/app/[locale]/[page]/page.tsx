@@ -1,18 +1,19 @@
 import { EventList } from "@/components/EventList";
-import { events } from "@/mock/bootshaus.json";
-import { AVAILABLE_LANG, STORES } from "@/constants";
+import { AvailableLang, STORES } from "@/constants";
 import { notFound } from "next/navigation";
 import { Container, Grid } from "@mui/material";
 import { Stage } from "@/components/Stage/Stage";
 import { LanguageSwitch } from "@/components/LanguageSwitch/LanguageSwitch";
 import { IEvent } from "@/components/EventList/useEventList";
+import { getEvents } from "@/mock/getEvents";
 
-export default function ListingPage({
+export default async function ListingPage({
   params,
 }: {
-  params: { locale: AVAILABLE_LANG; page: string };
+  params: { locale: AvailableLang; page: string };
 }) {
   const { locale, page } = params;
+  const events = await getEvents();
 
   if (!Object.keys(STORES).includes(locale)) return notFound();
   return (

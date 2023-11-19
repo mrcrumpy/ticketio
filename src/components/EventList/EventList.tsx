@@ -7,7 +7,7 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 import { useEventList } from ".";
 import { IEvent } from "./useEventList";
-import { AVAILABLE_LANG } from "@/constants";
+import { AvailableLang } from "@/constants";
 import { List } from "./views/List";
 import { Tiles } from "./views/Tiles";
 import { Calendar } from "./views/Calendar";
@@ -33,7 +33,7 @@ const StyledToggleButton = styled(ToggleButton)`
 
 const EventList: FC<{
   events: IEvent[];
-  locale: AVAILABLE_LANG;
+  locale: AvailableLang;
   page: number;
 }> = ({ events: rawEvents, locale, page }) => {
   const {

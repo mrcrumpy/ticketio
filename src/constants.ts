@@ -15,7 +15,7 @@ export const STORES = {
 
 export const DEFAULT_STORE = "de";
 
-export type AVAILABLE_LANG = "de" | "en";
+export type AvailableLang = "de" | "en";
 
 export interface IStoreConfig {
   currency: string;
