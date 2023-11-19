@@ -2,7 +2,7 @@
 
 import { AvailableLang, IStoreConfig, PER_PAGE, STORES } from "@/constants";
 import { TioEvent } from "@/data/event";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { chunkArray } from "./helper";
 
 export interface IAddress {
@@ -33,19 +33,28 @@ export const useEventList = (
   locale: AvailableLang,
   page: number
 ) => {
+  const [loaded, setLoaded] = useState<boolean>(false);
+
   const [displayMode, setDisplayMode] = useState<DisplayMode>("list");
 
   const [searchValue, setSearchValue] = useState<string>("");
 
-  useEffect(() => {
-    if (sessionStorage.getItem("displayMode")) {
-      setDisplayMode(sessionStorage.getItem("displayMode") as DisplayMode);
+  useLayoutEffect(() => {
+    const savedDisplayMode = sessionStorage.getItem(
+      "displayMode"
+    ) as DisplayMode;
+
+    if (savedDisplayMode) {
+      setDisplayMode(savedDisplayMode);
     }
+    setLoaded(true);
   }, []);
 
-  useEffect(() => {
-    sessionStorage?.setItem("displayMode", displayMode);
-  }, [displayMode]);
+  useLayoutEffect(() => {
+    if (loaded) {
+      sessionStorage?.setItem("displayMode", displayMode);
+    }
+  }, [displayMode, loaded]);
 
   const processedEvents = events
     .map((event) => TioEvent.from(event, locale))
