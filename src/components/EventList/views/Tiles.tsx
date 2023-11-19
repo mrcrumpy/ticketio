@@ -3,6 +3,7 @@ import { FC } from "react";
 import {
   Box,
   Button,
+  Chip,
   Grid,
   List,
   ListItem,
@@ -29,6 +30,9 @@ export const Tiles: FC<{ events: TioEvent[] }> = ({ events }) => {
           location,
           detailLink,
           info,
+          warning,
+          tickets,
+          soldOut,
         }) => (
           <Grid container key={id} marginBottom={4}>
             <Grid item xs={12} md={5}>
@@ -61,23 +65,53 @@ export const Tiles: FC<{ events: TioEvent[] }> = ({ events }) => {
                   </Typography>
                 </ListItem>
                 <ListItem>
-                  <Icon type="calendar_month" size={18} />
-                  {date}&nbsp;
-                  <Icon type="schedule" size={18} />
+                  <Icon type="calendar_month" size={18} marginRight={0.5} />
+                  {date}
+                  <Icon
+                    type="schedule"
+                    size={18}
+                    marginRight={0.5}
+                    marginLeft={1}
+                  />
                   {time}
                 </ListItem>
                 <ListItem>
-                  <Icon type="location_on" size={18} />
+                  <Icon type="location_on" size={18} marginRight={0.5} />
                   {location}
                 </ListItem>
-                <ListItem>
-                  <Icon type="confirmation_number" size={18} />
-                  {t("Tickets from", { price })}
-                </ListItem>
+                {!soldOut && (
+                  <ListItem>
+                    <Icon
+                      type="confirmation_number"
+                      size={18}
+                      marginRight={0.5}
+                    />
+                    {t("Tickets from", { price })}
+                  </ListItem>
+                )}
+                {soldOut && (
+                  <ListItem>
+                    <Chip
+                      variant="outlined"
+                      color="error"
+                      label={t("Sold out")}
+                    />
+                  </ListItem>
+                )}
                 {info && (
                   <ListItem>
-                    <Icon type="info" size={18} />
+                    <Icon type="info" size={18} marginRight={0.5} />
                     {info}
+                  </ListItem>
+                )}
+                {warning && !soldOut && (
+                  <ListItem sx={{ color: "warning.main" }}>
+                    <Icon type="warning" size={18} marginRight={0.5} />
+                    <Typography>
+                      {t("Only amount tickets left", {
+                        amount: tickets.amount,
+                      })}
+                    </Typography>
                   </ListItem>
                 )}
               </List>

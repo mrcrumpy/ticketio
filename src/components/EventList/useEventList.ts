@@ -14,6 +14,10 @@ export interface IAddress {
   addressCountry: string;
 }
 
+export interface ITickets {
+  amount: number;
+  totalAmount: number;
+}
 export interface IEvent {
   id: string;
   title: string;
@@ -25,6 +29,7 @@ export interface IEvent {
   priceFrom: number;
   location: string;
   info?: string;
+  tickets: ITickets;
 }
 
 type DisplayMode = "list" | "tiles" | "calendar";

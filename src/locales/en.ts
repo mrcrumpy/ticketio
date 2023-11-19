@@ -8,4 +8,6 @@ export default {
   German: "German",
   English: "English",
   "There were no events found": "There were no events found",
+  "Only amount tickets left": "Only {amount} tickets left",
+  "Sold out": "Sold out",
 } as const;

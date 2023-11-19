@@ -24,3 +24,6 @@ export interface IStoreConfig {
 }
 
 export const PER_PAGE = 8;
+
+// value in percent
+export const TICKET_THRESHOLD = 10;

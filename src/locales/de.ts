@@ -9,4 +9,6 @@ export default {
   English: "Englisch",
   "There were no events found":
     "Es konnten keine Veranstaltungen gefunden werden",
+  "Only amount tickets left": "Nur noch {amount} Tickets verfügbar",
+  "Sold out": "Ausverkauft",
 } as const;

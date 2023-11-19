@@ -22,6 +22,9 @@ const theme = {
     error: {
       main: "#BC2F2F",
     },
+    warning: {
+      main: "#E6A800",
+    },
   },
   typography: {
     h1: {

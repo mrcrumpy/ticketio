@@ -1,5 +1,9 @@
-import { IAddress, IEvent } from "@/components/EventList/useEventList";
-import { AvailableLang, STORES } from "@/constants";
+import {
+  IAddress,
+  IEvent,
+  ITickets,
+} from "@/components/EventList/useEventList";
+import { AvailableLang, STORES, TICKET_THRESHOLD } from "@/constants";
 
 export class TioEvent {
   locale: AvailableLang;
@@ -16,6 +20,7 @@ export class TioEvent {
   endDate: string;
   address: IAddress;
   info?: string;
+  tickets: ITickets;
 
   static from(event: IEvent, locale: AvailableLang) {
     if (!event.id || !event.title || !event.startDate) {
@@ -46,6 +51,7 @@ export class TioEvent {
     this.storeConfig = STORES[locale];
     this.address = event.address;
     this.info = event.info;
+    this.tickets = event.tickets;
   }
 
   get date() {
@@ -80,5 +86,16 @@ export class TioEvent {
 
   get detailLink() {
     return `/${this.locale}/event/${this.id}`;
+  }
+
+  get soldOut() {
+    return this.tickets.amount === 0;
+  }
+
+  get warning() {
+    return (
+      (this.tickets?.amount / this.tickets?.totalAmount) * 100 <
+      TICKET_THRESHOLD
+    );
   }
 }

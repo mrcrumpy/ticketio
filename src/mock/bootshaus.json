@@ -17,8 +17,8 @@
     "priceFrom": 15,
     "location": "Bootshaus, Köln",
     "tickets": {
-      "amount": 10,
-      "totalAmoun": 100
+      "amount": 2,
+      "totalAmount": 100
     }
   },
   {
@@ -39,8 +39,8 @@
     "priceFrom": 0,
     "location": "Bootshaus, Köln",
     "tickets": {
-      "amount": 10,
-      "totalAmoun": 100
+      "amount": 0,
+      "totalAmount": 100
     },
     "info": "Where energy is infinite, reality is a myth. Inurfase Massive: Portal of Illusion 🌄"
   },
@@ -63,7 +63,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -85,7 +85,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -107,7 +107,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -128,8 +128,8 @@
     "priceFrom": 0,
     "location": "Bootshaus, Köln",
     "tickets": {
-      "amount": 10,
-      "totalAmoun": 100
+      "amount": 0,
+      "totalAmount": 100
     }
   },
   {
@@ -151,7 +151,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -173,7 +173,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -195,7 +195,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -217,7 +217,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -239,7 +239,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -261,7 +261,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -283,7 +283,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -305,7 +305,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -327,7 +327,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -348,8 +348,8 @@
     "priceFrom": 0,
     "location": "Bootshaus, Köln",
     "tickets": {
-      "amount": 10,
-      "totalAmoun": 100
+      "amount": 0,
+      "totalAmount": 100
     }
   },
   {
@@ -371,7 +371,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -393,7 +393,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -415,7 +415,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -437,7 +437,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -459,7 +459,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -481,7 +481,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -503,7 +503,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
@@ -525,7 +525,7 @@
     "location": "Bootshaus, Köln",
     "tickets": {
       "amount": 10,
-      "totalAmoun": 100
+      "totalAmount": 100
     }
   },
   {
