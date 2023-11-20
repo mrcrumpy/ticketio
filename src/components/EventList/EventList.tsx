@@ -96,9 +96,11 @@ const EventList: FC<{
           </Grid>
         </Grid>
       </Grid>
-      {displayMode === "list" && <List events={events} />}
-      {displayMode === "tiles" && <Tiles events={events} />}
-      {displayMode === "calendar" && <Calendar events={events} />}
+      {displayMode === "list" && !!events.length && <List events={events} />}
+      {displayMode === "tiles" && !!events.length && <Tiles events={events} />}
+      {displayMode === "calendar" && !!events.length && (
+        <Calendar events={events} />
+      )}
       {!events || !events.length ? (
         <EmptyState />
       ) : (

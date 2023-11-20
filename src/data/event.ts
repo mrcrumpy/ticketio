@@ -89,7 +89,7 @@ export class TioEvent {
   }
 
   get soldOut() {
-    return this.tickets.amount === 0;
+    return this.tickets?.amount === 0;
   }
 
   get warning() {
